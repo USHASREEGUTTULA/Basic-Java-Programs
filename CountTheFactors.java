@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class PrimeNumber
+class CountTheFactors
 {
 	public static void main(String[] args) 
 	{
@@ -7,24 +7,23 @@ class PrimeNumber
 		System.out.println("Enter a number");
 		int n=sc.nextInt();
 
-		boolean isPrime=true;
-		for (int i=2;i<n ;i++ )
+		int count=0;
+		for (int i=1;i<=n ;i++ )
 		{
 			if (n%i==0)
 			{
-				isPrime=false;
-				break;
+				count++;
 			}
 			
 		}
-		
-		if (isPrime==true)
+		System.out.println("Factors of the number is: "+count);
+		if (count==2)
 		{
-			System.out.println(n+" is a prime number");
+			System.out.println(n+"is a prime number");
 		}
 		else
 			{
-			System.out.println(n+" is not a prime number");
+			System.out.println(n+"is not a prime number");
 		}
 
 	}
